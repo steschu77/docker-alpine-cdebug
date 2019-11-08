@@ -5,4 +5,7 @@ RUN apk update
 RUN apk --no-cache add gdb lldb
 RUN apk --no-cache add mc joe vim bash bash-completion
 
+ENV HOME /root
+COPY .bashrc $HOME/
+
 CMD ["/bin/bash"]
